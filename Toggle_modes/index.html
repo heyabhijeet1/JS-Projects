@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body.light {
+            background-color: #ffffff;
+            color: #111;
+        }
+
+        body.dark {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        body.light .page {
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        body.dark .page {
+            color: #f5f5f5;
+            background: #121212;
+        }
+
+        .theme-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 999px;
+            background: #ffffff;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .theme-button:hover {
+            background: #f1f5f9;
+        }
+
+        .theme-button::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #f59e0b;
+        }
+
+        body.dark .theme-button {
+            border-color: #475569;
+            background: #1f2937;
+            color: #f5f5f5;
+        }
+
+        body.dark .theme-button:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <button class="theme-button" id="themeToggle" type="button">
+            Theme mode
+        </button>
+    </main>
+
+    <script src="/Local Storage/script.js"></script>
+</body>
+
+</html>
